@@ -1,0 +1,37 @@
+{
+
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "editor.formatOnSave": false,
+
+  // The number of spaces a tab is equal to. This setting is overridden
+  // based on the file contents when `editor.detectIndentation` is true.
+  "editor.tabSize": 4,
+
+  // Insert spaces when pressing Tab. This setting is overriden
+  // based on the file contents when `editor.detectIndentation` is true.
+  "editor.insertSpaces": true,
+
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-txt",
+    "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+  },
+
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {"django-html": "html"},
+
+  "html": {
+    "abbreviations": {
+        "bq": "blockquote",
+        "oll": "ol>li"
+    }
+},
+"python.pythonPath": ".venv/bin/python"
+
+
+
+}
