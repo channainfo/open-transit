@@ -30,7 +30,7 @@
         "oll": "ol>li"
     }
 },
-"python.pythonPath": ".venv/bin/python"
+"python.pythonPath": "../.venv/bin/python3"
 
 
 
