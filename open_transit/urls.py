@@ -17,16 +17,17 @@ from django.contrib import admin
 from django.urls import include, path
 
 from django.conf.urls.i18n import i18n_patterns
-from django.utils.translation import gettext_lazy
+from django.utils.translation import gettext as _
 
-
+# prefix url with the language code
 urlpatterns = i18n_patterns(
-     path('', include('transit.urls', namespace='root') ),
-     path('transit/', include('transit.urls', namespace='transit_root') ),
+
+    path('', include('transit.urls', namespace='root') ),
+    path('transit/', include('transit.urls', namespace='transit_root') ),
     path('admin/', admin.site.urls),
-    prefix_default_language=False
+    prefix_default_language=True
 )
 
-admin.site.index_title = gettext_lazy("Open Transit")
-admin.site.site_header = gettext_lazy("Open Transit Admin")
-admin.site.site_title = gettext_lazy("Open Transit Management")
+admin.site.index_title = _("Open Transit")
+admin.site.site_header = _("Open Transit Admin")
+admin.site.site_title  = _("Open Transit Management")

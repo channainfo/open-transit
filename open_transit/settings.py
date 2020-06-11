@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # My own app
     'transit.apps.TransitConfig',
+
+    # Third-party app
+    'modeltrans'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'open_transit.urls'
@@ -116,7 +123,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -131,3 +139,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+from django.utils.translation import gettext_lazy as _
+
+# https://django-modeltrans.readthedocs.io/en/latest/pages/settings.html
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('km', _('Khmer')),
+    ('en', _('English')),
+    ('zh', _('Chinese')),
+    ('fr', _('French')),
+]
+
+LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
+
+# supported translations
+MODELTRANS_AVAILABLE_LANGUAGES = ('kh', 'zh', 'fr')
