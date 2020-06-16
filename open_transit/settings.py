@@ -62,7 +62,8 @@ ROOT_URLCONF = 'open_transit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,13 +149,13 @@ from django.utils.translation import gettext_lazy as _
 LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
-    ('km', _('Khmer')),
-    ('en', _('English')),
-    ('zh', _('Chinese')),
-    ('fr', _('French')),
+    ('km', 'ខ្មែរ'),
+    ('en', 'English'),
+    ('zh-hans', '中文'),
+    ('vi', 'Tiếng việt'),
 ]
 
 LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
 
 # supported translations
-MODELTRANS_AVAILABLE_LANGUAGES = ('kh', 'zh', 'fr')
+MODELTRANS_AVAILABLE_LANGUAGES = ('km', 'zh-hans', 'vi')

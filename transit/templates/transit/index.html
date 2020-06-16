@@ -1,3 +1,16 @@
-{% load i18n %}
+{% extends 'transit/base.html' %}
 
-{% trans "Hello" %} -> {{data}}
+{% load i18n %}
+{% load ot_tags %}
+
+{% block title %}
+  Company index
+{% endblock %}
+
+{% block content %}
+  {% trans 'Open Transit content' %}
+  {% ot_languages as langs %}
+  {% for lang  in langs %}
+     {{lang.0}} - {{lang.1}}
+  {% endfor %}
+{% endblock %}

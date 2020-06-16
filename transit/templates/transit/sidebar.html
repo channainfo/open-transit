@@ -1,0 +1,5 @@
+{% load ot_tags %}
+{% load i18n %}
+{% block sidebar %}
+  <b> {% trans 'Language' %} {% ot_settings "LANGUAGE_CODE" %}</b>
+{% endblock %}

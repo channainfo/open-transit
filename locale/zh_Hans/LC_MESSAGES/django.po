@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-16 00:45+0000\n"
+"POT-Creation-Date: 2020-06-16 14:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: open_transit/settings.py:152
 msgid "Khmer"
@@ -31,7 +31,7 @@ msgid "Chinese"
 msgstr ""
 
 #: open_transit/settings.py:155
-msgid "French"
+msgid "Vietnamese"
 msgstr ""
 
 #: open_transit/urls.py:31 transit/templates/transit/head.html:4
@@ -50,19 +50,19 @@ msgstr ""
 msgid "Welcome,"
 msgstr ""
 
-#: templates/admin/base.html:44
+#: templates/admin/base.html:44 templates/admin/base_site.html:15
 msgid "View site"
 msgstr ""
 
-#: templates/admin/base.html:49
+#: templates/admin/base.html:49 templates/admin/base_site.html:33
 msgid "Documentation"
 msgstr ""
 
-#: templates/admin/base.html:53
+#: templates/admin/base.html:53 templates/admin/base_site.html:38
 msgid "Change password"
 msgstr ""
 
-#: templates/admin/base.html:55
+#: templates/admin/base.html:55 templates/admin/base_site.html:40
 msgid "Log out"
 msgstr ""
 
@@ -70,13 +70,13 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/admin/base_site.html:3
+#: templates/admin/base_site.html:4
 msgid "Django site admin"
 msgstr ""
 
 #: transit/apps.py:7
 msgid "Open Transit System"
-msgstr ""
+msgstr "开放式公交系统"
 
 #: transit/models.py:14
 msgid "First name and last name"
@@ -94,21 +94,21 @@ msgstr ""
 msgid "Short description"
 msgstr ""
 
-#: transit/models.py:28
+#: transit/models.py:29
 msgid "Phone must be exactly 10 digits."
 msgstr ""
 
-#: transit/models.py:29
+#: transit/models.py:30
 msgid "phone number"
 msgstr ""
 
-#: transit/models.py:38
-msgid "Company"
-msgstr "Company"
-
 #: transit/models.py:39
+msgid "Company"
+msgstr "公司"
+
+#: transit/models.py:40
 msgid "Companies"
-msgstr "Companies"
+msgstr "公司"
 
 #: transit/templates/transit/index.html:11
 msgid "Open Transit content"
