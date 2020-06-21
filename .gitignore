@@ -24,6 +24,7 @@ var/
 .installed.cfg
 *.egg
 
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -43,6 +44,10 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
+
+# Ingore all under uploads except default
+uploads/*
+!uploads/default-pic.png
 
 # Translations
 *.mo

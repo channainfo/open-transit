@@ -7,11 +7,14 @@
 
   // The number of spaces a tab is equal to. This setting is overridden
   // based on the file contents when `editor.detectIndentation` is true.
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
+  "workbench.tree.indent": 20,
 
   // Insert spaces when pressing Tab. This setting is overriden
   // based on the file contents when `editor.detectIndentation` is true.
   "editor.insertSpaces": true,
+  "editor.cursorStyle": "block",
+  "editor.wordWrap": "on",
 
   "files.associations": {
     "**/*.html": "html",

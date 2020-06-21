@@ -5,3 +5,8 @@ from django.utils.translation import gettext_lazy as _
 class TransitConfig(AppConfig):
     name = 'transit'
     verbose_name = _('Open Transit System')
+
+
+    def ready(self):
+        import transit.signals
+        # return super().ready()

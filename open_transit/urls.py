@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static
 
 from django.conf.urls.i18n import i18n_patterns
+from django.conf import settings
 from django.utils.translation import gettext as _
 
 # prefix url with the language code
@@ -27,6 +29,12 @@ urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     prefix_default_language=True
 )
+
+# Serve upload file in dev (DEBUG=true)
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
+if(settings.DEBUG):
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 admin.site.index_title = _("Open Transit")
 admin.site.site_header = _("Open Transit Admin")
